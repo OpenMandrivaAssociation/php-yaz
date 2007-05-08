@@ -5,8 +5,8 @@
 
 Summary:	A Z39.50 client for PHP
 Name:		php-%{modname}
-Version:	1.0.8
-Release:	%mkrel 4
+Version:	1.0.9
+Release:	%mkrel 1
 License:	PHP License
 Group:		Development/PHP
 URL:		http://pecl.php.net/package/yaz
@@ -14,11 +14,10 @@ Source0:	http://pecl.php.net/get/%{modname}-%{version}.tar.bz2
 Source1:	%{modname}.ini
 # http://indexdata.dk/phpyaz/demo/mult.phps
 Source2:	mult.php
-Patch0:		yaz-1.0.2-antibork.diff
-BuildRequires:	php-devel >= 3:5.2.0
-BuildRequires:	yaz-devel tcp_wrappers-devel 
-Provides:	php5-yaz
-Obsoletes:	php5-yaz
+Patch0:		yaz-antibork.diff
+BuildRequires:	php-devel >= 3:5.2.2
+BuildRequires:	yaz-devel >= 3.0.0
+BuildRequires:	tcp_wrappers-devel 
 Epoch:		1
 BuildRoot:	%{_tmppath}/%{name}-%{version}-buildroot
 
@@ -62,5 +61,3 @@ install -m0644 %{inifile} %{buildroot}%{_sysconfdir}/php.d/%{inifile}
 %doc CREDITS README mult.php package.xml
 %config(noreplace) %attr(0644,root,root) %{_sysconfdir}/php.d/%{inifile}
 %attr(0755,root,root) %{_libdir}/php/extensions/%{soname}
-
-
