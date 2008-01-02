@@ -19,6 +19,7 @@ BuildRequires:	php-devel >= 3:5.2.2
 BuildRequires:	yaz-devel >= 3.0.0
 BuildRequires:	tcp_wrappers-devel 
 Epoch:		1
+BuildRoot:	%{_tmppath}/%{name}-%{version}-buildroot
 
 %description
 This extension implements a Z39.50 client for PHP using the YAZ toolkit.
