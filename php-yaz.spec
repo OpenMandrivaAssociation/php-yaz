@@ -5,12 +5,12 @@
 
 Summary:	A Z39.50 client for PHP
 Name:		php-%{modname}
-Version:	1.0.13
-Release:	%mkrel 5
+Version:	1.0.14
+Release:	%mkrel 1
 License:	PHP License
 Group:		Development/PHP
 URL:		http://pecl.php.net/package/yaz
-Source0:	http://pecl.php.net/get/%{modname}-%{version}.tar.bz2
+Source0:	http://pecl.php.net/get/%{modname}-%{version}.tgz
 Source1:	%{modname}.ini
 # http://indexdata.dk/phpyaz/demo/mult.phps
 Source2:	mult.php
@@ -23,7 +23,7 @@ BuildRequires:	libxslt-devel
 BuildRequires:	libpth-devel
 BuildRequires:	tcp_wrappers-devel 
 Epoch:		1
-BuildRoot:	%{_tmppath}/%{name}-%{version}-buildroot
+BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
 %description
 This extension implements a Z39.50 client for PHP using the YAZ toolkit.
