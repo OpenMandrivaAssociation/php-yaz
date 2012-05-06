@@ -15,6 +15,7 @@ Source1:	%{modname}.ini
 # http://indexdata.dk/phpyaz/demo/mult.phps
 Source2:	mult.php
 Patch0:		yaz-antibork.diff
+Patch1:		yaz-1.1.1-php54x.diff
 BuildRequires:	php-devel >= 3:5.2.2
 BuildRequires:	yaz-devel >= 3.0.0
 BuildRequires:	libicu-devel
@@ -34,6 +35,7 @@ This extension implements a Z39.50 client for PHP using the YAZ toolkit.
 [ "../package.xml" != "/" ] && mv ../package.xml .
 
 %patch0 -p0
+%patch1 -p0
 
 cp %{SOURCE1} %{inifile}
 cp %{SOURCE2} mult.php
