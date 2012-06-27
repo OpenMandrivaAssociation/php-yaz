@@ -5,7 +5,7 @@
 
 Summary:	A Z39.50 client for PHP
 Name:		php-%{modname}
-Version:	1.1.2
+Version:	1.1.3
 Release:	%mkrel 1
 License:	PHP License
 Group:		Development/PHP
