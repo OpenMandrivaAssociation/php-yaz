@@ -1,0 +1,24 @@
+--- config.m4	2007-05-16 09:21:50.000000000 +0200
++++ config.m4.oden	2007-06-03 13:06:08.000000000 +0200
+@@ -21,16 +21,18 @@
+ 
+   if test -f $yazconfig; then
+     AC_DEFINE(HAVE_YAZ,1,[Whether you have YAZ])
+-    . $yazconfig
+ 
+     AC_MSG_CHECKING([for YAZ version])
+-    yaz_version=`echo $YAZVERSION | awk 'BEGIN { FS = "."; } { printf "%d", ($1 * 1000 + $2) * 1000 + $3;}'`
+-    if test "$yaz_version" -ge 3000002; then
++    YAZVERSION=`$yazconfig --version echo | awk 'BEGIN { FS = "."; } { printf "%d", ($1 * 1000 + $2) * 1000 + $3;}'`
++    if test "$YAZVERSION" -ge 3000002; then
+       AC_MSG_RESULT([$YAZVERSION])
+     else
+       AC_MSG_ERROR([YAZ version 3.0.2 or later required.])
+     fi
+ 
++    YAZLIB=`$yazconfig --libs`
++    YAZINC=`$yazconfig --cflags`
++
+     for c in $YAZLIB; do
+       case $c in
+        -L*)
