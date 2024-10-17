@@ -9,7 +9,7 @@ Version:	1.1.3
 Release:	2
 License:	PHP License
 Group:		Development/PHP
-URL:		http://pecl.php.net/package/yaz
+URL:		https://pecl.php.net/package/yaz
 Source0:	http://ftp.indexdata.dk/pub/phpyaz/yaz-%{version}.tgz
 Source1:	%{modname}.ini
 # http://indexdata.dk/phpyaz/demo/mult.phps
