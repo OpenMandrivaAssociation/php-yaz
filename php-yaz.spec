@@ -6,7 +6,7 @@
 Summary:	A Z39.50 client for PHP
 Name:		php-%{modname}
 Version:	1.1.3
-Release:	2
+Release:	3
 License:	PHP License
 Group:		Development/PHP
 URL:		https://pecl.php.net/package/yaz
