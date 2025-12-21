@@ -15,6 +15,11 @@ Source1:	%{modname}.ini
 # http://indexdata.dk/phpyaz/demo/mult.phps
 Source2:	mult.php
 Patch0:		yaz-antibork.diff
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires:	php-devel >= 3:5.2.2
 BuildRequires:	yaz-devel >= 3.0.0
 BuildRequires:	libicu-devel
